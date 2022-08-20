@@ -12,7 +12,6 @@ def index():
 # Login page
 @app.route("/login")
 def login():
-    print("Nice")
     return render_template("login.html")
 
 # Register page
@@ -37,4 +36,4 @@ def about():
 
 # run the app
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')
