@@ -24,15 +24,5 @@ def register():
 def profile():
     return render_template("profile.html")
 
-# Contact page
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-# About page
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
