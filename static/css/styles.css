@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --blue: #0088a9;
+  --grey: #24252a;
+  --white: #edf0f1;
+}
+
+/* Header */
+header nav {
+  height: 125px;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--grey);
+}
+
+header nav a img {
+  max-width: 20rem;
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 1rem;
+  font-size: 1.3rem;
+}
+
+header nav ul li a {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: var(--blue);   
+}
+
+header nav ul .DHB__Header-Nav_Lock {
+  border: 2px solid var(--white);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+header nav ul .DHB__Header-Nav_Lock:hover {
+  border: 2px solid var(--blue);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* Splash Page */
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/bank1.jpg");
+  height: 65vh;
+  width: 98%;
+  margin: 1%;
+  border-radius: 2rem;
+  box-shadow: 0px 1px 10px 0 rgb(0 0 0 / 70%), 0 6px 30px 0 rgb(0 0 0 / 19%);
+}
+
+header div h1 {
+  color: var(--white);
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Main */
