@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="icon" href="../static/images/Dhruv_Banking-Logo.png">
+<title>Home | Dhruv Banking</title>
+<script src="https://kit.fontawesome.com/866b8b01f2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../static/css/login.css">
+{% endblock %}
+
+{% block body %}
+<!-- HEADER -->
+<header>
+    <!--- NAVIGATION -->
+    <nav>
+        <a href="/" class="DHB__Header-Nav_Icon">
+            Dhruv Banking™️
+        </a>
+
+        <ul>
+            <li><a href="#">Register</a></li>
+            <li><a class="DHB__Header-Nav_Lock" href="/login">Login <i class="fa-solid fa-lock"></i></a></li>
+        </ul>   
+    </nav>
+</header>
+
+<!-- MAIN -->
+<main>
+    <form onsubmit="return false">
+        <h2>Login!</h2>
+  
+        <label for="Username">Username:</label>
+        <input
+          type="text"
+          name="Username"
+          id="Username"
+          placeholder="Enter Username Please"
+          required
+        />
+  
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          name="Password"
+          id="Password"
+          placeholder="Enter Password Please"
+          required
+        />
+  
+        <input type="submit" id="Submit" />
+      </form>
+</main>
+
+<script src="../static/js/loginUser.js"></script>
+
+{% endblock %}
