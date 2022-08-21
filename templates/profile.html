@@ -1,0 +1,120 @@
+{% extends 'base.html' %} {% block head %}
+<title>Placeholder.</title>
+<script
+	src="https://kit.fontawesome.com/866b8b01f2.js"
+	crossorigin="anonymous"
+></script>
+<link rel="icon" href="../static/images/Dhruv_Banking-Logo.png" />
+<link rel="stylesheet" href="../static/css/profile.css" />
+{% endblock %} {% block body %}
+<!-- HEADER -->
+<header>
+	<!--- NAVIGATION -->
+	<nav>
+		<a href="#" class="DHB__Header-Nav_Icon"> Dhruv Banking™️ </a>
+
+		<ul>
+			<li><a href="/register">Settings</a></li>
+			<li>
+				<a
+					onclick="logOut()"
+					class="DHB__Header-Nav_Lock"
+					href="/login"
+				>
+					Log out <i class="fa-solid fa-lock-open"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<!-- MAIN -->
+<main>
+	<div class="DHR__Main-Account Checkings">
+		<h2>Checkings</h2>
+		<p id="checkings">Loading...</p>
+	</div>
+	<div class="DHR__Main-Account Savings">
+		<h2>Savings</h2>
+		<p id="savings">Loading...</p>
+	</div>
+
+	<hr />
+
+	<div class="DHR__Main-Transfer_Money">
+		<h2>Transfer Money From Accounts</h2>
+
+		<form
+			id="DHR__Main-Transfer_Money_sameAccount"
+			onsubmit="return false"
+			class="DHR__Main-Transfer_Money_sameAccount"
+		>
+			<div>
+				<select id="transferFrom" name="transferFrom">
+					<option value="Checkings">Checkings</option>
+					<option value="Savings">Savings</option>
+				</select>
+
+				<div>
+					<img src="../static/images/arrow.png" alt="" />
+				</div>
+
+				<select id="transferTo" name="transferTo">
+					<option value="Savings">Savings</option>
+					<option value="Checkings">Checkings</option>
+				</select>
+			</div>
+
+			<input
+				id="Amount"
+				type="number"
+				step="0.0000001"
+				placeholder="Enter Amount to Send"
+				name="name"
+				min="1"
+				max="1000"
+				required
+			/>
+			<input type="submit" id="Submit" />
+		</form>
+	</div>
+
+	<hr />
+
+	<div class="DHR__Main-Transfer_Money-AnotherUser">
+		<h2>Transfer money to another User</h2>
+		<form
+			id="DHR__Main-Transfer_Money_toAnotherUser"
+			onsubmit="return false"
+			class="DHR__Main-Transfer_Money_toAnotherUser"
+		>
+			<!-- USERNAME -->
+			<input
+				id="Username"
+				type="text"
+				placeholder="Enter Username of the reciever"
+				name="username"
+				required
+			/>
+
+			<!-- AMOUNT -->
+			<input
+				id="AmountTransfer"
+				type="number"
+				placeholder="Enter Amount to Send"
+				name="name"
+				min="1"
+				step="0.0000001"
+				max="1000"
+				required
+			/>
+
+			<input id="Submit" type="submit" />
+		</form>
+	</div>
+</main>
+
+<script src="../static/js/getUserData.js"></script>
+<script src="../static/js/transferMoneySameUser.js"></script>
+<script src="../static/js/transferMoneyAnotherUser.js"></script>
+{% endblock %}
