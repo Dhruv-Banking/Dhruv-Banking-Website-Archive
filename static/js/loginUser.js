@@ -1,4 +1,4 @@
-const localUrl = "http://127.0.0.1:5000/";
+const localUrl = "https://front-end-flask.vercel.app/";
 
 class User {
 	constructor(username, password) {
