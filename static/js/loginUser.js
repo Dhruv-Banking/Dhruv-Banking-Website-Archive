@@ -1,4 +1,3 @@
-const localUrl = "http://127.0.0.1:5000/";
 const loader = document.getElementById("loader");
 
 class User {
@@ -18,12 +17,14 @@ async function loginAuthAndToken() {
 
 	let token = await getToken(user.username, user.password);
 	if (token === undefined) {
+		loader.style.visibility = "hidden";
 		return alert(
 			"Unable to authenticate your login, please try again later."
 		);
 	}
 
 	if (!(await authLogin(user.username, user.password, token))) {
+		loader.style.visibility = "hidden";
 		return alert(
 			"Unable to authenticate your login, please try again later."
 		);
@@ -33,7 +34,7 @@ async function loginAuthAndToken() {
 	window.sessionStorage.setItem("password", user.password);
 	window.sessionStorage.setItem("token", token);
 
-	window.location.replace(`${localUrl}profile`);
+	window.location.replace(`/profile`);
 }
 
 async function authLogin(username, password, token) {
