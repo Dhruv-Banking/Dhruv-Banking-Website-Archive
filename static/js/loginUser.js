@@ -1,4 +1,5 @@
-const localUrl = "https://front-end-flask.vercel.app/";
+const localUrl = "http://127.0.0.1:5000/";
+const loader = document.getElementById("loader");
 
 class User {
 	constructor(username, password) {
@@ -12,6 +13,8 @@ async function loginAuthAndToken() {
 	const password = document.querySelector("#Password").value;
 
 	const user = new User(username, password);
+
+	loader.style.visibility = "visible";
 
 	let token = await getToken(user.username, user.password);
 	if (token === undefined) {
