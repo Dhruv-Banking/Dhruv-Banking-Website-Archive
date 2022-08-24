@@ -24,5 +24,10 @@ def register():
 def profile():
     return render_template("profile.html")
 
+# Reset password URL
+@app.route("/reset")
+def resetLink():
+    return render_template("resetPass.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

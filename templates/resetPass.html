@@ -1,11 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
 {% block head %}
-<link rel="icon" href="../static/images/Dhruv_Banking-Logo.png">
-<title>Home | Dhruv Banking</title>
-<script src="https://kit.fontawesome.com/866b8b01f2.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../static/css/login.css">
-{% endblock %}
+<title>Reset Password | Dhruv Banking</title>
+<link rel="stylesheet" href="../static/css/resetPass.css">
+{% endblock %} 
 
 {% block body %}
 <!-- HEADER -->
@@ -27,18 +25,9 @@
 <main>
     <div id="loader"></div>
     <form onsubmit="return false">
-        <h2>Login!</h2>
+        <h2>Reset Password</h2>
   
-        <label for="Username">Username:</label>
-        <input
-          type="text"
-          name="Username"
-          id="Username"
-          placeholder="Enter Username Please"
-          required
-        />
-  
-        <label for="Password">Password</label>
+        <label for="Password">Password:</label>
         <input
           type="password"
           name="Password"
@@ -51,7 +40,5 @@
     </form>
 </main>
 
-<script src="../static/js/getToken.js"></script>
-<script src="../static/js/loginUser.js"></script>
-
+<script src="../static/js/resetPassword.js"></script>
 {% endblock %}

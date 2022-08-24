@@ -1,11 +1,10 @@
-const localUrl = "http://127.0.0.1:5000/";
 const apiURL = "https://dhruv-api-tau.vercel.app/";
 
 async function authLoggedIn() {
 	let username = window.sessionStorage.getItem("username");
 
 	if (username === null) {
-		return window.location.replace(`${localUrl}`);
+		return window.location.replace('/');
 	}
 
 	let token = window.sessionStorage.getItem("token");
