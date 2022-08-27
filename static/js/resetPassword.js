@@ -19,6 +19,11 @@ async function resetPassword() {
     }
 
     const password = document.querySelector("#Password").value;
+    const passwordConfirm = document.querySelector("#confirmPassword").value
+
+    if (password !== passwordConfirm) {
+        return alert("Passwords are not the same.")
+    }
 
     let result = await resetPasswordReq(token, password);
 
