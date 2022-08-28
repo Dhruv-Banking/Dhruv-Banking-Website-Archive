@@ -29,6 +29,7 @@ def profile():
 def resetLink():
     return render_template("resetPass.html")
 
+# Forgot passowrd route
 @app.route("/forgotPassword")
 def forgotPassword():
     return render_template("forgotPassword.html")
