@@ -20,14 +20,6 @@ async function postUserFunc() {
 
 	const user = new postUser(username, firstname, lastname, email, password);
 
-	let token = await getPostUserToken(user);
-
-	if (token === false) {
-		return alert("Unknown error, please try again later.");
-	}
-
-	user.token = token;
-
 	let result = await requestVerifyEmail(user);
 
 	if (result !== true) {
@@ -44,7 +36,6 @@ async function requestVerifyEmail(user) {
 	let sentEmail = false;
 
 	var myHeaders = new Headers();
-	myHeaders.append("Authorization", `Bearer ${user.token}`);
 	myHeaders.append("Content-Type", "application/json");
 
 	var raw = JSON.stringify({

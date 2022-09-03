@@ -5,19 +5,19 @@ function verifyEmailCall() {
 	form.addEventListener("submit", verifyEmail);
 }
 
+const params = new Proxy(new URLSearchParams(window.location.search), {
+	get: (searchParams, prop) => searchParams.get(prop),
+});
+
+let token = params.token;
+
+if (token === "" || token === undefined) {
+	window.location.replace(`/`);
+}
+
 verifyEmailCall();
 
 async function verifyEmail() {
-	const params = new Proxy(new URLSearchParams(window.location.search), {
-		get: (searchParams, prop) => searchParams.get(prop),
-	});
-
-	let token = params.token;
-
-	if (token === "" || token === undefined) {
-		return window.location.replace(`/`);
-	}
-
 	let result = await postUserToDatabase(token);
 
 	if (result !== true) {
