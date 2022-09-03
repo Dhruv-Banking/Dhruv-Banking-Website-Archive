@@ -1,4 +1,4 @@
-let apiUrl = "https://dhruv-api-tau.vercel.app/";
+let apiUrl = "https://dhruv-banking.vercel.app/";
 
 class postUser {
 	constructor(username, firstname, lastname, email, password, token) {
@@ -27,8 +27,6 @@ async function postUserFunc() {
 	}
 
 	user.token = token;
-
-	console.log(user);
 
 	let result = await requestVerifyEmail(user);
 

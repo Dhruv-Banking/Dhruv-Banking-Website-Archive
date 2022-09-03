@@ -1,4 +1,4 @@
-const apiURL = "https://dhruv-api-tau.vercel.app/";
+const apiURL = "https://dhruv-banking.vercel.app/";
 
 async function getToken(name, password) {
 	let tokenReturn = "";

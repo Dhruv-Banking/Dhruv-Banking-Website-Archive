@@ -57,7 +57,7 @@ async function authLogin(username, password, token) {
 	};
 
 	await fetch(
-		"https://dhruv-api-tau.vercel.app/authUserLogin",
+		"https://dhruv-banking.vercel.app/authUserLogin",
 		requestOptions
 	)
 		.then((response) => response.json())

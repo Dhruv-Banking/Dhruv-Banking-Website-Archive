@@ -29,10 +29,14 @@ def profile():
 def resetLink():
     return render_template("resetPass.html")
 
-# Forgot passowrd route
+# Forgot password route
 @app.route("/forgotPassword")
 def forgotPassword():
     return render_template("forgotPassword.html")
+
+@app.route("/verifyEmail")
+def verifyEmail():
+    return render_template("verifyEmail.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

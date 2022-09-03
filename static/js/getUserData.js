@@ -1,10 +1,10 @@
-const apiURL = "https://dhruv-api-tau.vercel.app/";
+const apiURL = "https://dhruv-banking.vercel.app/";
 
 async function authLoggedIn() {
 	let username = window.sessionStorage.getItem("username");
 
 	if (username === null) {
-		return window.location.replace('/');
+		return window.location.replace("/");
 	}
 
 	let token = window.sessionStorage.getItem("token");
